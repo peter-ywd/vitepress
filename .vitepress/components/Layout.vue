@@ -1,9 +1,9 @@
 <script setup>
-import DefaultTheme from 'vitepress/theme'
-import { useData } from 'vitepress'
+import DefaultTheme from "vitepress/theme";
+import { useData } from "vitepress";
 
-const { Layout } = DefaultTheme
-const { page } = useData()
+const { Layout } = DefaultTheme;
+const { page } = useData();
 </script>
 
 <template>
@@ -12,10 +12,21 @@ const { page } = useData()
     <template #doc-after>
       <ClientOnly>
         <!-- Giscus 评论组件 -->
+        <div class="comment-container">
         <GiscusComment
           v-if="page.isNotFound !== true"
           :key="page.relativePath"
+          repo="peter-ywd/vitepress"
+          repoId="R_kgDOOMP-Wg"
+          category="General"
+          categoryId="DIC_kwDOOMP-Ws4CoT2m"
+          mapping="pathname"
+          reactionsEnabled="true"
+          theme="preferred_color_scheme"
+          lang="zh-CN"
+          loading="lazy"
         />
+        </div>
       </ClientOnly>
     </template>
   </Layout>
@@ -23,7 +34,7 @@ const { page } = useData()
 
 <style>
 /* 自定义评论区域样式 */
-.giscus-frame {
+.comment-container {
   margin-top: 3rem;
   border-top: 1px solid var(--vp-c-divider);
   padding-top: 2rem;

@@ -6,15 +6,6 @@ const vitePressOptions = {
   description: "vitepress blog",
   base: '/vitepress/',
   ignoreDeadLinks: true,
-  giscus: {
-    repo: 'peter-ywd/vitepress',
-    repoId: 'R_kgDOOMP-Wg',
-    category: 'General',
-    categoryId: 'DIC_kwDOOMP',
-    mapping: 'pathname',
-    reactionsEnabled: true,
-    theme: 'preferred_color_scheme'
-  },
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
