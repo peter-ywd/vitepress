@@ -4,7 +4,7 @@ import { withSidebar } from "vitepress-sidebar";
 const vitePressOptions = {
   title: "vitepress blog",
   description: "vitepress blog",
-  base: '/',
+  base: '/vitepress/',
   ignoreDeadLinks: true,
   giscus: {
     repo: 'peter-ywd/vitepress',
