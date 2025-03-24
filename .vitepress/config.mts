@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
 import { withSidebar } from "vitepress-sidebar";
-import timeline  from "vitepress-markdown-timeline";
+import timeline from "vitepress-markdown-timeline";
 
 // https://vitepress.dev/reference/site-config
 const vitePressOptions = {
@@ -17,19 +17,18 @@ const vitePressOptions = {
   },
   ignoreDeadLinks: true,
   themeConfig: {
-    
     // https://vitepress.dev/reference/default-theme-config
     nav: [
-      { text: "Home", link: "/" },
-      { text: "前端面试题w", link: "/docs-1/测试文件" },
-      { text: "面试题", link: "/docs-2/wqwqw/TEST-Router" },
+      { text: "首页", link: "/" },
+      { text: "笔记", link: "/mark/index", activeMatch: "/mark/" },
+      { text: "面试题", link: "/interview/index", activeMatch: "/interview/" },
     ],
 
     // sidebar: 'auto',
 
     socialLinks: [{ icon: "github", link: "https://github.com/peter-ywd" }],
     lastUpdated: {
-      text: "Updated at",
+      text: "最后更新",
       formatOptions: {
         dateStyle: "full",
         timeStyle: "medium",
@@ -63,25 +62,26 @@ const vitePressOptions = {
       prev: "上一篇",
       next: "下一篇",
     },
-    notFound:{ // 404页
-      title: '未找到页面，迷路了~',
-      quote: '请检查地址是否正确，或当前页面未开通，点击下方按钮返回首页',
-      linkText: '返回首页'
+    notFound: {
+      // 404页
+      title: "未找到页面，迷路了~",
+      quote: "请检查地址是否正确，或当前页面未开通，点击下方按钮返回首页",
+      linkText: "返回首页",
     },
   },
 };
 const vitePressSidebarOptions = [
   {
-    documentRootPath: "docs-2",
+    documentRootPath: "interview",
     scanStartPath: "/",
-    basePath: "/docs-2/",
-    resolvePath: "/docs-2/",
+    basePath: "/interview/",
+    resolvePath: "/interview/",
     useTitleFromFileHeading: true,
   },
   {
-    documentRootPath: "docs-1",
+    documentRootPath: "mark",
     scanStartPath: "/",
-    resolvePath: "/docs-1/",
+    resolvePath: "/mark/",
     useTitleFromFrontmatter: true,
   },
 ];

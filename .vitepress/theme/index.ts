@@ -13,7 +13,6 @@ import "vitepress-markdown-timeline/dist/theme/index.css";
 
 import './style.css'
 import './custom.css';
-
 let ignoreList = ['/a', '/b']
 export default {
   extends: DefaultTheme,
