@@ -7,7 +7,7 @@ const vitePressOptions = {
   lang: "zh", //中文配置
   title: "vitepress blog",
   description: "vitepress blog",
-  base: "/vitepress/",
+  base: "/",
   markdown: {
     lineNumbers: true,
     //时间线
