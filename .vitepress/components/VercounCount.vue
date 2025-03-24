@@ -1,4 +1,3 @@
-// DataPanel.vue
 <template>
   <!-- busuanzi用法 -->
   <!-- <div class="text" id="busuanzi_container_site_pv">
