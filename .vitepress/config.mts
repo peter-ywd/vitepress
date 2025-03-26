@@ -1,9 +1,45 @@
 import { defineConfig } from "vitepress";
 import { withSidebar } from "vitepress-sidebar";
 import timeline from "vitepress-markdown-timeline";
+import { generateIndexMd } from "./utils/generateNav";
 
+const NAV_LIST = [
+  { text: "笔记", path: "mark" },
+  { text: "面试题", path: "interview" },
+];
+function createIndexMdFile() {
+  NAV_LIST.forEach((nav) => {
+    generateIndexMd(nav.path);
+  });
+}
 // https://vitepress.dev/reference/site-config
+
 const vitePressOptions = {
+  vite: {
+    // 使用 Vite 的构建钩子
+    plugins: [
+      {
+        name: 'generate-md-files',
+    // 开发服务器钩子
+    configureServer(server) {
+      server.middlewares.use(async (req, res, next) => {
+        await createIndexMdFile()
+        next()
+      })
+    },
+    // 构建钩子
+    buildStart: async () => {
+      await createIndexMdFile()
+    },
+    // 监听文件变化（开发模式）
+    handleHotUpdate({ file }) {
+      if (NAV_LIST.map(_=>_.path).some((path => file.includes(path)))) { 
+        createIndexMdFile()
+      }
+    }
+      }
+    ]
+  },
   lang: "zh", //中文配置
   title: "vitepress blog",
   description: "vitepress blog",
@@ -20,18 +56,21 @@ const vitePressOptions = {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
       { text: "首页", link: "/" },
-      { text: "笔记", link: "/mark/index", activeMatch: "/mark/" },
-      { text: "面试题", link: "/interview/index", activeMatch: "/interview/" },
+      ...NAV_LIST.map((nav) => ({
+        text: nav.text,
+        link: `${nav.path}/index`,
+        activeMatch: `/${nav.path}/`,
+      })),
     ],
 
     // sidebar: 'auto',
 
     socialLinks: [{ icon: "github", link: "https://github.com/peter-ywd" }],
     lastUpdated: {
-      text: "最后更新",
+      text: "最后更新", // 标签文字
       formatOptions: {
-        dateStyle: "full",
-        timeStyle: "medium",
+        dateStyle: "short", // 日期格式
+        // timeStyle: "short", // 时间格式
       },
     },
     search: {
@@ -68,6 +107,7 @@ const vitePressOptions = {
       quote: "请检查地址是否正确，或当前页面未开通，点击下方按钮返回首页",
       linkText: "返回首页",
     },
+    
   },
 };
 const vitePressSidebarOptions = [

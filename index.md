@@ -13,7 +13,6 @@ hero:
     - theme: alt
       text: API Examples
       link: /api-examples
-
 features:
   - title: Feature A
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -22,10 +21,16 @@ features:
   - title: Feature C
     details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
+
 <VercounCount />
+<!-- <div v-for="post in posts">
+  <h2><a :href="post.url">{{ post.frontmatter.title }}</a></h2>
+  <div v-html="post.excerpt"></div>
+</div> -->
 
 <script setup lang="ts">
 // 导入访问数据组件
+// import { data as posts } from './.vitepress/data/data';
+
 import VercounCount from './.vitepress/components/VercounCount.vue'
 </script>
-
