@@ -66,13 +66,14 @@ const vitePressOptions = {
     // sidebar: 'auto',
 
     socialLinks: [{ icon: "github", link: "https://github.com/peter-ywd" }],
-    lastUpdated: {
-      text: "最后更新", // 标签文字
-      formatOptions: {
-        dateStyle: "short", // 日期格式
-        // timeStyle: "short", // 时间格式
-      },
-    },
+    lastUpdated: false,
+    // lastUpdated: {
+    //   text: "最后更新", // 标签文字
+    //   formatOptions: {
+    //     dateStyle: "short", // 日期格式
+    //     // timeStyle: "short", // 时间格式
+    //   },
+    // },
     search: {
       // 搜索
       provider: "local",
@@ -93,10 +94,10 @@ const vitePressOptions = {
         },
       },
     },
-    editLink: {
-      pattern: "https://github.com/peter-ywd/vite-press-docs/edit/main/:path",
-      text: "在 GitHub 上编辑此页面",
-    },
+    // editLink: {
+    //   pattern: "https://github.com/peter-ywd/vite-press-docs/edit/main/:path",
+    //   text: "在 GitHub 上编辑此页面",
+    // },
     docFooter: {
       prev: "上一篇",
       next: "下一篇",
