@@ -1,5 +1,11 @@
 ---
-lastUpdated: 2025-03-27
+title: keep-alive 实现原理
+datetime: '2023-10-01 10:00:00'
+permalink: /mark/b4e6e4
+order: 1
+category: 笔记
+tags:
+  - vue
 ---
 # keep-alive 实现原理
 

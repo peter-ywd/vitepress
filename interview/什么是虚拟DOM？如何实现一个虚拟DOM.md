@@ -1,5 +1,12 @@
 ---
-lastUpdated: 2025-03-27
+title: 什么是虚拟DOM？
+datetime: '2023-10-06 10:00:00'
+permalink: /interview/8308ab
+outline: deep
+order: 2
+category: 面试题
+tags:
+  - vue
 ---
 # 什么是虚拟DOM？如何实现一个虚拟DOM？
 
