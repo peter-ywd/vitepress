@@ -1,5 +1,12 @@
 ---
-lastUpdated: 2025-03-27
+title: vue要做权限管理该怎么做
+datetime: '2023-10-06 10:00:00'
+permalink: /interview/3817ca
+outline: deep
+order: 2
+category: 面试题
+tags:
+  - vue
 ---
 
 # vue要做权限管理该怎么做？如果控制到按钮级别的权限怎么做？

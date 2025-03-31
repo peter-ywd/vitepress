@@ -11,24 +11,22 @@ function fetchPostData(dirPath) {
     transform(raw) {
       return raw
         .map(({ url, frontmatter, excerpt }) => ({
+          ...frontmatter,
           title: frontmatter.title || path.basename(url, ".html"),
           url,
           excerpt,
-          date: frontmatter.lastUpdated
-            ? formattedDate(frontmatter.lastUpdated)
-            : formattedDate(new Date("2023-12-01")),
-          lastUpdated: frontmatter.lastUpdated || new Date("2023-12-01"),
+          date: formattedDate(frontmatter.datetime),
+          lastUpdated: frontmatter.datetime || new Date("2023-12-01"),
         }))
-        .sort((a, b) => new Date(b.lastUpdated) - new Date(a.lastUpdated));
+        .sort((a, b) => new Date(b.datetime) - new Date(a.datetime));
     },
   });
 }
 export async function generateIndexMd(dirPath) {
-  const posts = await fetchPostData(dirPath).load();
+  const posts = (await fetchPostData(dirPath).load()).filter((item) => item.title !== dirPath);
   let content = ``; // index.md 文件的头部
   const dateObj = {};
   posts
-    .filter((item) => item.title !== dirPath)
     .forEach((post) => {
       if (!dateObj[post.date]) dateObj[post.date] = [post];
       else dateObj[post.date].push(post);
@@ -45,9 +43,11 @@ export async function generateIndexMd(dirPath) {
 
   // 将生成的内容写入到 index.md 文件
   fs.writeFileSync(path.resolve(dirPath, "index.md"), content, "utf8");
+  return posts
 }
+
 function formattedDate(date) {
-  let dateValue = date instanceof Date ? date : new Date("2023-12-01");
+  let dateValue = new Date(date);
   // 格式化日期
   return dateValue.toLocaleDateString("zh-CN", {
     year: "numeric",

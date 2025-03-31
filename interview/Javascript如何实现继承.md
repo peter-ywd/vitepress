@@ -1,12 +1,19 @@
 ---
-lastUpdated: 2025-03-27
+title: Javascript如何实现继承
+datetime: '2023-10-06 10:00:00'
+permalink: /interview/1a6c25
+outline: deep
+order: 2
+category: 面试题
+tags:
+  - Javascript
 ---
 
 # Javascript如何实现继承？
 
 ## 一、是什么
 
-继承（inheritance）是面向对象软件技术当中的一个概念。
+继承（inheritance）是面向对象软件技术当中的一个概念。ss
 
 如果一个类别B“继承自”另一个类别A，就把这个B称为“A的子类”，而把A称为“B的父类别”也可以称“A是B的超类”
 
