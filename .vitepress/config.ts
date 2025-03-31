@@ -27,6 +27,7 @@ const { posts, rewrites } = await usePosts({
 });
 
 export default defineConfigWithTheme<ThemeConfig>({
+  base: "/",
   title: "Peter",
   titleTemplate: "VitePress Theme Minimalism",
   description: "VitePress Theme Minimalism",
