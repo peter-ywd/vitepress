@@ -35,7 +35,7 @@ export async function generateIndexMd(dirPath) {
     if (dateObj[key]) {
         content += `::: timeline ${key}\n`;
         dateObj[key].forEach(post => {
-        content += `- <a href="${post.url}">${post.title}</a>\n`;
+        content += `- <a href="${post.permalink || post.url}">${post.title}</a>\n`;
       });
       content += `::: \n`;
     }
