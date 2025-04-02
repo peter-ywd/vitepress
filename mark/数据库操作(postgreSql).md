@@ -1,7 +1,6 @@
 ---
 title: 数据库操作练习
 datetime: '2025-03-02 10:14:56'
-permalink: /mark/82d320
 order: 1
 category: 笔记
 tags:
@@ -9,7 +8,7 @@ tags:
 ---
 
 
-#### 操作命令
+## 操作命令
 ##### 1.连接数据库(psql -h host -p port -d dbname -U user -W)
 ```bash
 $ psql -h localhost -p 5432 -U postgres -W

@@ -1,7 +1,6 @@
 ---
 title: typeorm练习
 datetime: '2025-01-02 11:24:22'
-permalink: /mark/82d320
 order: 1
 category: 笔记
 tags:
@@ -9,7 +8,7 @@ tags:
 ---
 
 ![alt text](image-1.png)
-##### 一、初始化typeorm项目
+## 一、初始化typeorm项目
 
 1. **执行如下命令创建项目**
 
@@ -53,7 +52,7 @@ Loaded users:  [ User { id: 1, firstName: 'Timber', lastName: 'Saw', age: 25 } ]
 Here you can setup and run express / fastify / any other framework.
 ```
 
-##### 二、创建实体
+## 二、创建实体
 
 1. **新建文件 Menu.ts**
 ```js
