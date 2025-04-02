@@ -104,10 +104,7 @@ export default defineConfigWithTheme<ThemeConfig>({
     ],
     sidebar,
     socialLinks: [
-      {
-        icon: "github",
-        link: "https://github.com/izhichao/vitepress-theme-minimalism",
-      },
+      { icon: "github", link: "https://github.com/peter-ywd/vitepress" }
     ],
     footer: {
       // message:
