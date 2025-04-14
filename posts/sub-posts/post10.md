@@ -6,6 +6,9 @@ outline: deep
 category: 子文章
 tags:
   - 一杯茶的时光
+prev:
+  text: webpack构建流程
+  link: /mark/c6cc08
 next:
   text: 音乐的魔力
   link: /posts/0e1cd7

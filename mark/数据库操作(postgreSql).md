@@ -1,6 +1,7 @@
 ---
 title: 数据库操作练习
 datetime: '2025-03-02 10:14:56'
+permalink: /mark/8edb4f
 order: 1
 category: 笔记
 tags:

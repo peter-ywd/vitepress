@@ -1,6 +1,7 @@
 ---
 title: typeorm练习
 datetime: '2025-01-02 11:24:22'
+permalink: /mark/9b6aff
 order: 1
 category: 笔记
 tags:
