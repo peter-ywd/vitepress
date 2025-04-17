@@ -1,10 +1,16 @@
 ---
 title: 数据库操作练习
 datetime: '2025-03-02 10:14:56'
-order: 1
+permalink: /mark/8edb4f
 category: 笔记
 tags:
   - 数据库
+prev:
+  text: webpack构建流程
+  link: /mark/ff7155
+next:
+  text: typeorm练习
+  link: /mark/9b6aff
 ---
 
 

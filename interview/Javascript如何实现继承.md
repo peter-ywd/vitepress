@@ -3,10 +3,15 @@ title: Javascript如何实现继承
 datetime: '2023-10-06 10:00:00'
 permalink: /interview/1a6c25
 outline: deep
-order: 2
 category: 面试题
 tags:
   - Javascript
+prev:
+  text: 简单文件上传服务
+  link: /mark/785dbf
+next:
+  text: vue要做权限管理该怎么做
+  link: /interview/3817ca
 ---
 
 # Javascript如何实现继承？

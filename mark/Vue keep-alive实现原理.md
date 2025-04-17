@@ -2,10 +2,12 @@
 title: keep-alive 实现原理
 datetime: '2023-10-01 10:00:00'
 permalink: /mark/b4e6e4
-order: 1
 category: 笔记
 tags:
   - vue
+prev:
+  text: 对工厂模式的理解
+  link: /interview/0a0cf2
 ---
 # keep-alive 实现原理
 
