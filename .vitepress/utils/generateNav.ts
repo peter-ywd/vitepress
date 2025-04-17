@@ -18,7 +18,7 @@ function fetchPostData(dirPath) {
           date: formattedDate(frontmatter.datetime),
           lastUpdated: frontmatter.datetime || new Date("2023-12-01"),
         }))
-        .sort((a, b) => new Date(b.datetime) - new Date(a.datetime));
+        .sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime());
     },
   });
 }
@@ -26,7 +26,7 @@ export async function generateIndexMd(dirPath) {
   const posts = (await fetchPostData(dirPath).load()).filter((item) => item.title !== dirPath);
   let content = ``; // index.md 文件的头部
   const dateObj = {};
-  posts
+  posts.sort((a, b) => new Date(b.datetime).getTime() - new Date(a.datetime).getTime())
     .forEach((post) => {
       if (!dateObj[post.date]) dateObj[post.date] = [post];
       else dateObj[post.date].push(post);

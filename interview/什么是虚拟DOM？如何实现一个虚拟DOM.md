@@ -3,10 +3,15 @@ title: 什么是虚拟DOM？
 datetime: '2023-10-06 10:00:00'
 permalink: /interview/8308ab
 outline: deep
-order: 2
 category: 面试题
 tags:
   - vue
+prev:
+  text: vue要做权限管理该怎么做
+  link: /interview/3817ca
+next:
+  text: 对单例模式的理解
+  link: /interview/9ac894
 ---
 # 什么是虚拟DOM？如何实现一个虚拟DOM？
 

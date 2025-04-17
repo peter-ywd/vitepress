@@ -7,8 +7,8 @@
     category="General"
     categoryId="DIC_kwDOOMP-Ws4CoT2m"
     mapping="pathname"
+    :theme="isDark? 'dark' : 'light'"
     reactionsEnabled="true"
-    theme="preferred_color_scheme"
     lang="zh-CN"
     loading="lazy"
   />
@@ -19,8 +19,7 @@ import Giscus from '@giscus/vue'
 import { computed } from 'vue';
 import { useRoute, useData } from 'vitepress';
 
-const { theme, page } = useData();
-
+const { theme, page, isDark } = useData();
 const path = computed(() => useRoute().path);
 // const dark = 'html[class="dark"]';
 // const {

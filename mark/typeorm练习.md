@@ -2,10 +2,16 @@
 title: typeorm练习
 datetime: '2025-01-02 11:24:22'
 permalink: /mark/9b6aff
-order: 1
+outline: deep
 category: 笔记
 tags:
   - typeorm
+prev:
+  text: 数据库操作练习
+  link: /mark/8edb4f
+next:
+  text: 简单文件上传服务
+  link: /mark/785dbf
 ---
 
 ![alt text](image-1.png)

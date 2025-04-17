@@ -3,10 +3,15 @@ title: vue要做权限管理该怎么做
 datetime: '2023-10-06 10:00:00'
 permalink: /interview/3817ca
 outline: deep
-order: 2
 category: 面试题
 tags:
   - vue
+prev:
+  text: Javascript如何实现继承
+  link: /interview/1a6c25
+next:
+  text: 什么是虚拟DOM？
+  link: /interview/8308ab
 ---
 
 # vue要做权限管理该怎么做？如果控制到按钮级别的权限怎么做？
